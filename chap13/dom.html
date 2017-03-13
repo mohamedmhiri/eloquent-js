@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>eloquentJs Document Object Module</title>
+</head>
+<body>
+    <p id="salem">One</p>
+    <p>Two</p>
+    <p>Three</p>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <p id="test">Test</p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        var paragraphs = document.getElementById("salem");
+//        document.body.insertBefore(paragraphs[2], paragraphs[0]);
+        var salem = document.createTextNode("Salem");
+        var back = document.createElement('br')
+        paragraphs.appendChild(back)
+        paragraphs.appendChild(salem)
+    </script>
+    <!--<p>My ostrich Gertrude:</p>-->
+    <!--<p><img id="img-dom" src="img/ostrich.png"></p>-->
+    <!--<script>-->
+        <!--var ostrich = document.getElementById("img-dom");-->
+        <!--console.log(ostrich.src);-->
+    <!--</script>-->
+    <script>
+        $(document).ready(()=>{
+//            function showDom(){
+//                $("#show").click(function(){
+//                    $("#test").show();
+//                })
+////                hideDom()
+//            }
+//            function hideDom(){
+//                $("#show").click(function(){
+//                    $("#test").hide();
+//                })
+//                showDom()
+//            }
+//            hideDom()
+            $("#hide").click(function(){
+                $("#test").hide();
+//                $(this).click(function(){
+//                    $("#test").show();
+//                });
+            });
+            $("#show").click(function(){
+                $("#test").show();
+            });
+        } )
+    </script>
+</body>
+</html>
